@@ -13,6 +13,5 @@ langchain-core
 langchain-community
 langchain-groq
 langchain-openai
-sqlite3
-uuid
-chromadb
+fastapi
+uvicorn
