@@ -183,7 +183,7 @@ class PromptTemplate:
             "Available tools (Actions) are:\n"
             "- handle_sql_mode: <SQL prompt or question>\n"
             "  Use this category if the query involves:\n"
-            "    - Requests for data retrieval from the database (e.g., oldest, newest, or cheapest car).\n"
+            "    - Requests for data retrieval from the database or this website(e.g., oldest, newest, or cheapest car).\n"
             "    - Specific price-related questions or comparisons.\n"
             "    - Inquiries explicitly mentioning car models or requiring database lookup.\n"
             "      For example: \"I want car bmw\" should be handled by handle_sql_mode because it explicitly mentions\n"
