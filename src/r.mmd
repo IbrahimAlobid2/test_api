@@ -1,0 +1,24 @@
+```mermaid
+
+flowchart TD
+    A[Start]
+
+    K --> L["Initialize messages list"]
+    L --> M["Append system prompt + context"]
+    M --> N["For loop (max 3 iterations)"]
+    N --> O["Invoke text_generation_client.generate_text(...)"]
+    O --> P{"Check for 'Answer:' or 'Action:'"}
+    P -- "Answer:" --> Q["Extract final answer and return"]
+    P -- "Action:" --> R["Parse tool_name and tool_input"]
+    R --> S{"Tool Name?"}
+    S -- "handle_sql_mode" --> T["Call handle_sql_mode(tool_input)"]
+
+    S -- "process_uploaded_image" --> U["(Mock) Called process_uploaded_image"]
+ 
+    T & U --> V["Append 'Observation: <result>' to messages"]
+    V --> N["Continue loop"]
+    P -- "No Action or Answer" --> N
+    N --> W["Loop ended without 'Answer:'"]
+    W --> X["Return 'I'm sorry, but I couldn't find a final answer.'"]
+
+```
