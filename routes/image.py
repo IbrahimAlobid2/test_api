@@ -1,6 +1,6 @@
 from fastapi import APIRouter, UploadFile, File, HTTPException
 from models import ImageUploadResponse
-from controllers.bb import ChatbotController
+from controllers import ChatbotController
 import uuid
 from io import BytesIO
 

@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from models import ChatRequest, ChatResponse
-from controllers.bb import ChatbotController
+from controllers import ChatbotController
 
 chat_router = APIRouter()
 chatbot = ChatbotController()
