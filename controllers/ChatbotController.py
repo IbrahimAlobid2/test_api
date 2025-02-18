@@ -170,7 +170,7 @@ class ChatbotController(BaseController):
         max_iterations: int = 3
         for _ in range(max_iterations):
             assistant_reply = self.text_generation_client.generate_text(
-                prompt=self.prompt_template(user_prompt),
+                prompt=self.prompt_template.text_propt_user(user_prompt),
                 chat_history=messages
             )
 
