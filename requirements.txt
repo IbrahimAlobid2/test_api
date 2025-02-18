@@ -14,4 +14,8 @@ langchain-community
 langchain-groq
 langchain-openai
 fastapi
+<<<<<<< HEAD:requirements.txt
 uvicorn
+=======
+uvicorn
+>>>>>>> 30ad31c24c54b81acb6644a99d53e9c1d584f73f:src/requirements.txt
